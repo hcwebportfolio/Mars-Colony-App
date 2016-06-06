@@ -1,0 +1,17 @@
+
+$base_space-unit: 1.5rem;
+$small-width: 400px;
+$medium-width: 600px;
+
+@mixin medium {
+    @media screen and (min-width: $small-width) {
+        @content;
+    }
+}
+
+@mixin bigenough {
+    @media screen and (min-width: $medium-width) {
+        @content;
+    }
+}
+

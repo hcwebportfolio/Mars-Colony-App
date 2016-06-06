@@ -1,0 +1,14 @@
+div.encounter{
+    text-align: left;
+    width: 95%;
+    margin: 0 auto;
+
+    p {
+        margin: 1em;
+    }
+    
+    p:last-child {
+        
+        margin-left: 1.5em;
+    }
+}

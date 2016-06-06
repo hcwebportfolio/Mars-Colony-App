@@ -1,0 +1,27 @@
+a.register {
+    height: 25vw;
+    width: 25vw;
+    line-height: 25vw;
+    border-radius: 50%;
+    border: 6px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+    animation:  border-activate 1s infinite alternate 2s linear;
+}
+
+@keyframes border-activate {
+    
+    0% {
+        border-width: 4px;
+        border-color: rgba(0,0,0,0.3);
+    }
+    
+    50% {
+        border-width: 8px;
+        border-color: rgba(0,0,0,0.25);
+    }
+    
+    100% {
+        border-width: 12px;
+        border-color: rgba(0,0,0,0.2);
+    }
+}

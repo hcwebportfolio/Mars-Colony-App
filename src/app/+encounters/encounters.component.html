@@ -1,0 +1,29 @@
+
+<div class="app-container">
+
+  <header class="encounter">
+    <h1>Recent Encounters</h1>
+    <h2>
+      See an Alien? Report it!
+    </h2>
+  </header>
+
+  <div class="encounter">
+    <ul>
+      <li *ngFor="let encounter of encounters">
+        <p>
+          {{ encounter.date }} - {{ encounter.atype }}
+        </p>
+        <p>{{ encounter.action }}
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <footer class="encounter">
+
+      <a [routerLink] ="['/report']">Report Encounter</a>
+
+  </footer>
+
+</div>

@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Yantramanav:400,100);
+
+@import 'mixins'; // for media queries for font sizes
+
+
+$color__font: #CACACA;
+
+
+html {
+    font-size: 12px;
+    color: $color__font;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+
+    @include medium {
+        font-size: 3vw;
+    }
+
+    @include bigenough {
+        font-size: 18px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+h1 {
+    font-size: 2.4em;
+
+}
+
+h2 {
+    font-size: 1.95em;
+}
+
+h3 {
+    font-size: 1.56em;
+}
+
+p {
+    line-height: $base_space-unit;
+    margin-bottom: $base_space-unit;
+}
+
+input::-webkit-input-placeholder, .placeholder, textarea {
+    font-size: 1.2em;
+    color: red;
+}
+
+button, a {
+    font-size: 1.56em;
+    text-transform: uppercase;
+
+}
+
+a {
+    color: $color__font;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($color__font, 10%);
+    }
+}

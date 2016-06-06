@@ -1,0 +1,30 @@
+<div class="app-container">
+  <header class="form-header">
+    <h1>Report an Encounter</h1>
+    <h3>Safety on Mars is your responsibility</h3>
+  </header>
+
+  <form #reportForm="ngForm" (ngSubmit)="onSubmit($event)">
+    <fieldset>
+      <label for="alien">
+        <span>Alien Species:</span>
+        <select name="alien" id="alien">
+          <option value class="placeholder">Select alien type</option>
+          <option *ngFor="let alien of aliens" [value]="alien.id">{{ alien.type }}</option>
+        </select>
+      </label>
+      <label for="action">
+        <span>Action taken:</span>
+
+        <textarea ngControl="action" [(ngModel)]="encounters.action" type="text" name="action" id="action" placeholder="Action taken:" required>
+        </textarea>
+       </label>
+    </fieldset>
+    <fieldset>
+      <a [routerLink] ="['/encounters']">
+        <button type="submit">Submit Report</button>
+      </a>
+
+    </fieldset>
+  </form>
+</div>

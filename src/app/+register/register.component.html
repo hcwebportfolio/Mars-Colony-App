@@ -1,0 +1,26 @@
+<div class="app-container">
+  <header class="form-header">
+    <h1>Register</h1>
+  </header>
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
+
+    <fieldset>
+      <div>
+          <input ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" placeholder="Name" required>
+      </div>
+    <div>
+        <input ngControl="age" [(ngModel)]="colonist.age" id="age" type="number" placeholder="Age" required>
+    </div>
+        <select ngControl="job" [(ngModel)]="colonist.job_id" class="form-control">
+          <option [value]="NO_OCCUPATION_SELECTED">Select an Occupation</option>
+          <option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
+        </select>
+  </fieldset>
+
+  <fieldset>
+      <button type="submit" [disabled]="noOccupation || !registerForm.form.valid">Check in</button>
+</fieldset>
+
+  </form>
+
+</div>
